@@ -1,19 +1,19 @@
-#1 This is personal solution for coding challenge from Sortable https://sortable.com/challenge/
+> 1 This is personal solution for coding challenge from Sortable (https://sortable.com/challenge/)
 
 
-#2 Personal Analysis:
+> 2 Personal Analysis:
 Purpose: Match each listing to the correct product
 Constraints: 
-	1. A single listing to a product 
-	2. Perfer missed matches over incorrect match(false positive)
+	- A single listing to a product 
+	- Perfer missed matches over incorrect match(false positive)
 
-#3 How to do?
-1. Identification: according to the given example, I think the method the example used is by checking whether the prefix of the product match the listing title (one possible solution, but i just found the linking characters in the product_name like '-' and '_' should be processed as ' ' to match that in listings)
+> 3 How to do?
+-Identification: according to the given example, I think the method the example used is by checking whether the prefix of the product match the listing title (one possible solution, but i just found the linking characters in the product_name like '-' and '_' should be processed as ' ' to match that in listings)
 
-2. To avoid the false positive as much as possible, we can also check the match correctness of manufacturer.
+-To avoid the false positive as much as possible, we can also check the match correctness of manufacturer.
 
-#4 Possible optimization for program?
-A possbile Optimization is that we can first group the listings by the manaufacturer and then try to match with the product under the same manafaturer, which may decrease the times of searching. But this seems impossible when the listings data too big, because we need to read and process by line
+> 4 Possible optimization for program?
+-A possbile Optimization is that we can first group the listings by the manaufacturer and then try to match with the product under the same manafaturer, which may decrease the times of searching. But this seems impossible when the listings data too big, because we need to read and process by line
 
 
 
