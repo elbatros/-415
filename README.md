@@ -14,7 +14,8 @@
 ### Possible optimization for program?
 - A possbile Optimization is that we can first group the listings by the manaufacturer and then try to match with the product under the same manafaturer, which may decrease the times of searching. But this seems impossible when the listings data too big, because we need to read and process by line
 
-
+### Run
+git clone this repository and run main.py with python
 
 
 
