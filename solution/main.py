@@ -1,7 +1,7 @@
 #solution by python
 import json
 
-
+#function to convert '-' and '_' to ' '
 def convert(c):
 	if(c=='-' or c=='_'):
 		return ' '
@@ -16,10 +16,12 @@ product_list=[];
 product_ori_list=[];
 
 while 1:
+	#read json from file
 	line = fp.readline()
 	if not line:
 		break
 	data=json.loads(line)
+	#get the name and manu
 	product_name=data['product_name'].strip()
 	product_manu=data['manufacturer'].strip()
 
@@ -37,7 +39,8 @@ product_len=len(product_list)
 #print(product_list);
 
 
-#processing
+#processing stage
+#res_dict stores the result we need to output
 res_dict={};
 file= '../input_data/listings.txt'
 fp=open(file,'r')
@@ -49,10 +52,11 @@ while 1:
 	data=json.loads(line)
 	title=data['title'].strip();
 	manu=data['manufacturer'].strip();
+	#try to match the 
 	for i in range(0,product_len):
 		product_tempName=product_list[i]['name']
 		product_tempManu=product_list[i]['manu']
-
+		#I didn't use the manufacturer info but this might be an optional strategy to avoid false positive
 		if( title.startswith(product_tempName)):
 			#this listing belongs to product[i]
 			print('title: '+title+'   is:   ' +product_tempName)
@@ -64,7 +68,7 @@ while 1:
 fp.close()
 
 
-#output
+#output results
 file='../output.txt'
 fp=open(file,'w+')
 for key in res_dict:
