@@ -16,7 +16,7 @@
 - Another optimization might happen when comparing the prefix of strings where we can use the data structure like Trie Tree (make the prefix comparsion very efficient), but this demands for large space if the length of string(product_name) can be very long.
 
 ### Run
-git clone this repository and run main.py with python
+git clone this repository and run main.py in ./solution/main.py with python
 
 
 
