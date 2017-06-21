@@ -62,8 +62,7 @@ while 1:
 			print('title: '+title+'   is:   ' +product_tempName)
 			if product_tempName not in res_dict:
 				res_dict[product_tempName]={'product_name':product_ori_list[i],'listings':[]}
-			else:
-				res_dict[product_tempName]['listings'].append(data);
+			res_dict[product_tempName]['listings'].append(data);
 			break;
 fp.close()
 
